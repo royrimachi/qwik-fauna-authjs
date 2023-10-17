@@ -12,7 +12,9 @@ export default defineConfig(() => {
       },
     },
     optimizeDeps: {
-      include: ["@auth/core"]
-    }
+      include: ["@auth/core", "faunadb"]
+    },
+    build: {commonjsOptions: {include:[/fauna/, /node_modules/]}},
+    mode: 'development'
   };
 });
